@@ -1,0 +1,44 @@
+﻿@model List<Todo>
+
+@{
+    ViewData["Title"] = "Todo List";
+}
+
+<h2 class="text-center mb-4">Todo List</h2>
+
+<div class="d-flex justify-content-center mb-4">
+    <a href="/Todo/Create" class="btn btn-primary w-50">Create Todo</a>
+</div>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info text-center" role="alert">
+        No Todo's Yet — You're Clear to Enjoy!
+    </div>
+}
+else
+{
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            @foreach (var item in Model)
+            {
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">
+                                <strong>Due:</strong>
+                                @item.DueDate.ToString("dd MMM yyyy hh:mm tt")
+                            </p>
+                            <p class="card-text">
+                                <strong>Priority:</strong>
+                                <span class="text-muted">@item.priority.ToString()</span>
+                            </p>
+                        </div>
+                       
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

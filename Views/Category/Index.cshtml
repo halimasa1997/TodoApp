@@ -1,0 +1,61 @@
+﻿@model List<Category>
+
+<div>
+    <a asp-controller="Category" asp-action="Create" class="btn btn-primary mb-3">Create Category</a>
+
+    <table class="table table-active table-bordered table-hover table-responsive">
+        <thead class="bg-secondary text-light">
+            <tr>
+                <th>Category Id</th>
+                <th>Category Name</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>
+                        <a asp-controller="Category" asp-action="Update" asp-route-Id="@item.Id" class="btn btn-warning">
+                            Edit
+                        </a>
+                    </td>
+
+                    <td>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@item.Id">
+                            Delete
+                        </button>
+
+                        <!-- Delete Confirmation Modal -->
+                        <div class="modal fade" id="deleteModal-@item.Id" tabindex="-1" aria-labelledby="deleteModalLabel-@item.Id" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="deleteModalLabel-@item.Id">Delete Confirmation</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        Are you sure you want to delete the category "<strong>@item.Name</strong>"?
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <a asp-controller="Category" asp-action="Remove" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</div>

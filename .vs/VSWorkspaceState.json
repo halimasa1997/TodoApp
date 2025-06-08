@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Context",
+    "\\Controllers",
+    "\\Views",
+    "\\ViewsModels",
+    "\\Views\\Home",
+    "\\Views\\Shared",
+    "\\Views\\Todo"
+  ],
+  "PreviewInSolutionExplorer": false
+}

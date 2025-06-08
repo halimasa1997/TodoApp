@@ -1,0 +1,21 @@
+﻿@model Category
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+    <form method="post" class="w-100" style="max-width: 400px;">
+
+        <input asp-for="Id" type="hidden" />
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Category Name</label>
+            <input asp-for="Name" class="form-control" placeholder="Enter category name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Update Category</button>
+
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

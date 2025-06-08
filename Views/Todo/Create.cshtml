@@ -1,0 +1,58 @@
+﻿@using TodoApps.ViewsModels
+@model TodoViewes
+
+@{
+    ViewData["Title"] = "Create Todo";
+}
+
+<h2 class="text-center mb-4">Create a New Todo</h2>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Todo Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Description</label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="DueDate" class="form-label">Deadline</label>
+                <input asp-for="DueDate" class="form-control" />
+                <span asp-validation-for="DueDate" class="text-danger"></span>
+            </div>
+
+            @* Optional: Uncomment if you plan to use IsCompleted later *@
+            @* 
+            <div class="mb-3">
+                <label asp-for="IsCompeleted" class="form-label">Is Completed</label>
+                <input asp-for="IsCompeleted" class="form-control" />
+                <span asp-validation-for="IsCompeleted" class="text-danger"></span>
+            </div>
+            *@
+
+            <div class="mb-4">
+                <label asp-for="CategoryId" class="form-label">Category</label>
+                <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select">
+                    <option value="">-- Select Category --</option>
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Create Todo</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

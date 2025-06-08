@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .hero-section {
+        position: relative;
+        min-height: 70vh;
+        background-color: #fff9db; /* light yellow */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 600px;
+        color: #333;
+    }
+
+        .hero-content h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p.lead {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+    .btn-hero {
+        font-size: 1.25rem;
+        padding: 12px 40px;
+        font-weight: 600;
+        border-radius: 50px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.6);
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-hero:hover {
+            background-color: #0056b3;
+        }
+
+    a {
+        color: #007bff;
+        text-decoration: underline;
+    }
+
+        a:hover {
+            color: #0056b3;
+        }
+</style>
+
+<div class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome</h1>
+        <p class="lead">
+            Learn about
+            <a href="https://learn.microsoft.com/aspnet/core" target="_blank" rel="noopener noreferrer">
+                building Web apps with ASP.NET Core
+            </a>.
+        </p>
+        <button class="btn btn-hero">
+            Converting ideas into website
+        </button>
+    </div>
+</div>
