@@ -1,6 +1,7 @@
-##TodoApp
+*TodoApp*
 
 A simple and clean ASP.NET Core MVC application that helps users manage their daily tasks with category filtering and priority tracking.
+
 ---
 📌 ##Features
 ✅ Create, read, update, and delete (CRUD) Todo items
