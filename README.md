@@ -1,9 +1,9 @@
-*TodoApp*
+**TodoApp**
 
 A simple and clean ASP.NET Core MVC application that helps users manage their daily tasks with category filtering and priority tracking.
 
 ---
-📌 ##Features
+📌 **Features**
 ✅ Create, read, update, and delete (CRUD) Todo items
 
 🗂️ Assign tasks to categories
@@ -15,7 +15,7 @@ A simple and clean ASP.NET Core MVC application that helps users manage their da
 📦 Organized views using Bootstrap 5 cards and forms
 
 ---
-🚀 ##Technologies Used
+🚀 **Technologies Used**
 ASP.NET Core MVC (.NET 6 / .NET 7)
 
 Entity Framework Core
@@ -25,7 +25,8 @@ SQL Server (localdb or SQL Express)
 Bootstrap 5
 
 ---
-📁 ##Project Structure
+📁 **Project Structure**
+
 Models — Defines Todo and Category entities including priority and deadlines
 
 Data — Entity Framework Core DbContext and database migrations
