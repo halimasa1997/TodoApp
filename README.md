@@ -4,6 +4,7 @@ A simple and clean ASP.NET Core MVC application that helps users manage their da
 
 ---
 📌 **Features**
+
 ✅ Create, read, update, and delete (CRUD) Todo items
 
 🗂️ Assign tasks to categories
@@ -16,6 +17,7 @@ A simple and clean ASP.NET Core MVC application that helps users manage their da
 
 ---
 🚀 **Technologies Used**
+
 ASP.NET Core MVC (.NET 6 / .NET 7)
 
 Entity Framework Core
